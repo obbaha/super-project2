@@ -276,7 +276,7 @@ shareProduct() {
     !variation.isAvailable ? 'opacity-40 cursor-not-allowed' : '',
     selectedVariationId == variation.id
         ? 'border-primary bg-primary text-white shadow-md shadow-primary/30 scale-[1.02]'
-        : 'border-neutral-100 bg-white text-neutral/70 hover:border-primary/30 shadow-sm'
+        : 'border-primary/10 bg-white text-neutral/70 hover:border-primary/30 shadow-sm'
 ]"
                     :disabled="!variation.isAvailable">
                     <span x-text="variation.name"></span>
@@ -348,7 +348,7 @@ shareProduct() {
 
 {{-- حاوية العداد والمشاركة فقط --}}
 <div class="hidden lg:flex items-center gap-3 w-full lg:w-max mb-6">
-    <div class="flex items-center bg-white border border-neutral-100 rounded-2xl p-2 shadow-xl shadow-neutral-950/10">
+    <div class="flex items-center bg-white border border-primary/10 rounded-2xl p-2 shadow-xl shadow-neutral-950/10">
         <button @click="decrementQty" class="w-10 h-10 flex items-center justify-center rounded-xl hover:bg-white transition-colors text-primary font-bold text-xl">-</button>
         <span class="w-12 text-center text-xl font-black text-neutral" x-text="quantity"></span>
         <button @click="incrementQty" class="w-10 h-10 flex items-center justify-center rounded-xl hover:bg-white transition-colors text-primary font-bold text-xl">+</button>
@@ -356,7 +356,7 @@ shareProduct() {
 
     {{-- زر المشاركة للجوال --}}
     <button @click="shareProduct"
-            class="lg:hidden flex-1 flex items-center justify-center gap-2 h-[58px] rounded-2xl bg-white border border-neutral-100 text-primary shadow-xl shadow-neutral-950/10 active:scale-95 transition-transform">
+            class="lg:hidden flex-1 flex items-center justify-center gap-2 h-[58px] rounded-2xl bg-white border border-primary/10 text-primary shadow-xl shadow-neutral-950/10 active:scale-95 transition-transform">
         <x-icon name="o-share" class="w-5 h-5" />
         <span class="font-bold text-sm">مشاركة</span>
     </button>
@@ -423,7 +423,7 @@ shareProduct() {
 
 <div class="flex items-center gap-3 w-full lg:w-max mb-6">
 
-    <div class="flex items-center bg-white border border-neutral-100 rounded-2xl p-2 shadow-xl shadow-neutral-950/10">
+    <div class="flex items-center bg-white border border-primary/10 rounded-2xl p-2 shadow-xl shadow-neutral-950/10">
 
         <button @click="decrementQty" class="w-8 h-8 flex items-center justify-center rounded-lg hover:bg-white transition-colors text-primary font-bold text-lg">-</button>
 
@@ -439,7 +439,7 @@ shareProduct() {
 
     <button @click="shareProduct"
 
-            class="lg:hidden flex-1 flex items-center justify-center gap-2 h-[58px] rounded-2xl bg-white border border-neutral-100 text-primary shadow-xl shadow-neutral-950/10 active:scale-95 transition-transform">
+            class="lg:hidden flex-1 flex items-center justify-center gap-2 h-[58px] rounded-2xl bg-white border border-primary/10 text-primary shadow-xl shadow-neutral-950/10 active:scale-95 transition-transform">
 
         <x-icon name="o-share" class="w-5 h-5" />
 

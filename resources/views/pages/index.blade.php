@@ -73,7 +73,7 @@ $resetFilters = function() {
                         </span>
                         <div class="flex items-center gap-2 mt-1">
                             <div class="h-[1px] w-8 bg-primary/30"></div>
-                            <span class="text-[10px] text-gray-400 uppercase tracking-[0.4em] select-none">Luxury Concept</span>
+                            <span class="text-[10px] text-neutral/40 uppercase tracking-[0.4em] select-none">Luxury Concept</span>
                         </div>
                     </div>
                 </div>

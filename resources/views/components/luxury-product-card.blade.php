@@ -22,7 +22,7 @@
 <div class="relative group cursor-pointer" data-aos="fade-up">
     {{-- طبقة الخلفية الزجاجية (Glassmorphism) --}}
     <div class="absolute inset-0 bg-white/40 backdrop-blur-md rounded-3xl border border-primary/10 transition-all duration-500
-                @if($isAvailable) group-hover:bg-white/60 group-hover:shadow-[0_20px_50px_rgba(212,165,116,0.15)] group-hover:-translate-y-2 @endif">
+                @if($isAvailable) group-hover:bg-white/60 group-hover:shadow-primary/20 group-hover:-translate-y-2 @endif">
     </div>
 
     <div class="relative overflow-hidden rounded-3xl flex flex-col h-full">

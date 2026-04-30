@@ -43,7 +43,7 @@ data-aos-easing="ease-out-back">
 
             {{-- الطبقة المظلمة والمحتوى --}}
             <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end justify-start p-8 md:p-20 text-right">
-                <div class="text-white">
+                <div class="text-neutral-light">
                     @if($slide->title)
                         <h2 class="text-3xl md:text-5xl font-black mb-4">{{ $slide->title }}</h2>
                     @endif
