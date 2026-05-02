@@ -19,10 +19,20 @@ jobs:
           username: u162093132
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: 65002
-          # أضف هذا السطر ليتجاهل مشاكل البصمة الأمنية المتغيرة
           script_stop: true
           script: |
-            cd ~/domains/syriashop0.com/laravel_code
+            # 1. الدخول للمجلد الصحيح للمشروع الحالي
+            cd ~/domains/shaghafgifts2.com/public_html
+
+            # 2. تحديث الكود
             git fetch origin main
             git reset --hard origin/main
+
+            # 3. تحديث المكتبات والتهجير (ضروري جداً)
+            composer install --no-interaction --prefer-dist --optimize-autoloader
+            php artisan migrate --force
+
+            # 4. تنظيف الكاش لضمان ظهور التعديلات
             php artisan config:cache
+            php artisan route:cache
+            php artisan view:cache
