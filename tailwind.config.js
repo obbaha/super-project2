@@ -19,36 +19,26 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-      'main-gradient': "linear-gradient(135deg, rgba(212, 165, 116, 0.1) 0%, rgba(232, 180, 184, 0.2) 100%)",
+      'main-gradient': "linear-gradient(135deg, rgba(255, 192, 203, 0.1) 0%, rgba(255, 240, 245, 0.2) 100%)",
     },
       colors: {
         // الألوان الجديدة المستوحاة من index.html
-        primary: {
-          DEFAULT: '#D4A574', // الذهبي المشمشي
-          light: '#E8C9A8',
-          dark: '#B8864A',
-          50: '#FDF9F4',
-          100: '#FBF3EA',
-          200: '#F5E4D1',
-          300: '#EFCFAD',
-          400: '#E9B988',
-          500: '#D4A574',
-          600: '#B8864A',
-          700: '#8A6437',
-          800: '#5D4325',
-          900: '#302213'
-        },
-        secondary: {
-          DEFAULT: '#E8B4B8', // الوردي الهادئ المستخرج
-          light: '#F4D7DA',
-          dark: '#D19296',
-        },
-        neutral: {
-          DEFAULT: '#2C2C2C', // اللون الداكن للنصوص
-          light: '#F8F5F2',   // لون الخلفية الكريمي الجميل
-        },
-        // كلاسات إضافية لتسهيل استخدام التدرج
-        'accent-gradient': 'linear-gradient(135deg, #D4A574 0%, #E8B4B8 100%)',
+primary: {
+  DEFAULT: '#FFB6C1', // Light Pink
+  light: '#FFE4E1',   // Misty Rose
+  dark: '#DB7093',    // Pale Violet Red
+  50: '#FFF5F6',
+  100: '#FFEBEF',
+  200: '#FFD6DE',
+  300: '#FFB6C1',
+  400: '#FF8DA1',
+  500: '#FFB6C1',
+  600: '#E68A99',
+  700: '#B36B77',
+  800: '#804D55',
+  900: '#4D2E33'
+},
+'accent-gradient': 'linear-gradient(135deg, #FFB6C1 0%, #FFE4E1 100%)',
       },
       fontFamily: {
         cairo: ['Cairo', 'sans-serif'],
@@ -64,39 +54,29 @@ plugins: [
     require("daisyui"),
     function({ addComponents }) {
       addComponents({
-        '.btn-primary': {
-          'background': 'linear-gradient(135deg, #D4A574 0%, #E8B4B8 100%)', // التدرج من index.html
-          'color': 'white',
-          'border': 'none',
-          'transition': 'all 0.3s ease',
-          'box-shadow': '0 4px 15px rgba(212, 165, 116, 0.2)',
-          '@apply hover:shadow-lg hover:-translate-y-0.5 active:scale-95': {},
-        },
+'.btn-primary': {
+  'background': 'linear-gradient(135deg, #FFB6C1 0%, #FFD1DC 100%)',
+  'box-shadow': '0 4px 15px rgba(255, 182, 193, 0.3)',
+  'color': '#4A4A4A', // نصوص داكنة قليلاً لتناسب الزهري الفاتح
+},
         '.btn-outline-custom': {
           '@apply border border-primary/30 text-neutral hover:bg-primary/5 transition-all duration-300': {},
         }
-        
-        
+
+
       })
     }
 ],
   daisyui: {
     themes: [
       {
-        luxury: {
-          "primary": "#D4A574",
-          "secondary": "#E8B4B8",
-          "accent": "#B8864A",
-          "neutral": "#2C2C2C",
-          "base-100": "#F8F5F2", // الخلفية الكريمية الفاتحة
-          "base-200": "#FFFFFF",
-          "base-300": "#F1EAE4",
-          "base-content": "#2C2C2C", // نصوص داكنة لضمان الوضوح
-          "info": "#D4A574",
-          "success": "#4ade80",
-          "warning": "#facc15",
-          "error": "#f87171",
-        },
+luxury: {
+  "primary": "#FFB6C1",
+  "secondary": "#FFD1DC",
+  "accent": "#DB7093",
+  "base-100": "#FFF9FB", // خلفية تميل للزهري الأبيض
+  "neutral": "#4A4A4A",
+},
       },
     ],
   }
