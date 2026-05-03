@@ -63,17 +63,17 @@ $resetFilters = function() {
         <div class="absolute top-[-10%] left-[-10%] w-[45%] h-[45%] bg-primary/5 rounded-full blur-[120px] pointer-events-none"></div>
         <div class="absolute bottom-[20%] right-[-5%] w-[35%] h-[35%] bg-primary/10 rounded-full blur-[100px] pointer-events-none"></div>
 
-        {{-- اسم المتجر (غير متحرك) --}}
+{{-- اسم المتجر المتناسق مع الهوية الجديدة (Shaghaf Gifts) --}}
         <div class="relative w-full h-auto md:h-0 pt-8 pb-4 md:py-0">
             <div class="static md:absolute md:top-8 md:right-8 z-10 flex justify-center md:justify-end" data-aos="fade-left">
                 <div class="flex items-center gap-4">
                     <div class="flex flex-col items-end">
-                        <span class="text-primary text-3xl font-black tracking-tighter leading-none select-none">
-                            SYRIA SHOP<span class="opacity-40 text-sm ml-1">0</span>
+                        <span class="text-neutral text-3xl font-black tracking-tighter leading-none select-none uppercase font-playfair">
+                            SHAGHAF <span class="text-primary font-light italic lowercase text-2xl ml-1">Gifts2</span>
                         </span>
                         <div class="flex items-center gap-2 mt-1">
-                            <div class="h-[1px] w-8 bg-primary/30"></div>
-                            <span class="text-[10px] text-neutral/40 uppercase tracking-[0.4em] select-none">Luxury Concept</span>
+                            <div class="h-[1px] w-12 bg-primary/30"></div>
+                            <span class="text-[9px] text-secondary font-semibold uppercase tracking-[0.4em] font-cairo select-none">الهدايا التي تُصنع بحب</span>
                         </div>
                     </div>
                 </div>
@@ -194,11 +194,16 @@ $resetFilters = function() {
 
 
 
-                    <h3 class="text-5xl font-black text-neutral mb-4 tracking-tighter uppercase font-playfair">SYRIA SHOP0</h3>
+{{-- عنوان القسم الرئيسي Shaghaf Gifts --}}
+                    <h3 class="text-5xl font-black text-neutral mb-4 tracking-tighter uppercase font-playfair">
+                        SHAGHAF <span class="text-primary font-light italic lowercase">Gifts2</span>
+                    </h3>
                     <div class="flex items-center gap-4 mb-12">
-                        <div class="h-[1px] w-12 bg-primary/20"></div>
-                        <p class="text-primary text-xs uppercase tracking-[0.8em] font-semibold">Luxury Concept</p>
-                        <div class="h-[1px] w-12 bg-primary/20"></div>
+                        <div class="h-[1px] w-12 bg-primary/30"></div>
+                        <p class="text-secondary text-xs uppercase tracking-[0.5em] font-semibold font-cairo">
+                            الهدايا التي تُصنع بحب
+                        </p>
+                        <div class="h-[1px] w-12 bg-primary/30"></div>
                     </div>
 
 
@@ -220,8 +225,9 @@ $resetFilters = function() {
 
 
                     {{-- باقي حقوق الملكية --}}
-                    <div class="pt-12 border-t border-primary/5 w-full max-w-2xl text-[10px] text-neutral/30 uppercase tracking-[0.4em]">
-                        &copy; 2026 Syria Shop. Crafted for Elegance.
+{{-- باقي حقوق الملكية لمتجر شغف --}}
+                    <div class="pt-12 border-t border-primary/10 w-full max-w-2xl text-[10px] text-neutral/40 uppercase tracking-[0.4em]">
+                        &copy; 2026 SHAGHAF GIFTS2. CRAFTED WITH PASSION & LOVE.
                     </div>
                 </div>
             </div>
