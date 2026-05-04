@@ -17,12 +17,14 @@ class Product extends Model
         'name',
         'description',
         'price',
+        'old_price',
         'is_available',
     ];
 
     protected $casts = [
         'is_available' => 'boolean',
         'price' => 'decimal:2',
+        'old_price' => 'decimal:2',
     ];
 
     protected $attributes = [

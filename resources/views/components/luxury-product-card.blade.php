@@ -8,6 +8,7 @@
 
     // استخدام السعر من الموديل مباشرة
     $displayPrice = $product->price;
+    $oldPrice = $product->old_price;
 
     // جلب الصورة: نستخدم السمة المحسوبة في الموديل (getFeaturedImageAttribute)
     $displayImage = $product->featured_image;
@@ -46,11 +47,17 @@
                     <div class="bg-neutral/80 backdrop-blur-md text-white text-[9px] font-black px-3 py-1.5 rounded-full shadow-xl border border-white/20 uppercase tracking-widest">
                         غير متاح حالياً
                     </div>
-                @elseif($isNew)
-                    <div class="bg-primary text-white text-[10px] font-bold px-3 py-1 rounded-full shadow-lg">
-                        جديد
-                    </div>
                 @endif
+
+
+{{-- ملصق العرض الخاص (يظهر فقط إذا وجد سعر قديم أكبر من الحالي) --}}
+@if($oldPrice && $oldPrice > $displayPrice)
+                        <div class="bg-secondary text-white text-[10px] font-black px-3 py-1 rounded-full shadow-lg border border-white/10 flex items-center gap-1">
+                            <x-icon name="o-sparkles" class="w-3 h-3" />
+                            <span>عرض خاص</span>
+                        </div>
+                    @endif
+
             </div>
 
             {{-- تأثير التظليل عند التحويم للمنتجات المتاحة فقط --}}
@@ -72,10 +79,26 @@
 
             <div class="flex items-center justify-between mt-4">
                 <div class="flex flex-col">
-                    <span class="text-[10px] text-primary uppercase tracking-widest font-medium opacity-70">السعر</span>
-                    <span class="text-lg md:text-2xl font-black text-neutral">
-                        {{ number_format($displayPrice, 0) }} <span class="text-xs font-normal">ل.س</span>
-                    </span>
+
+
+            {{-- السعر القديم بجانبه --}}
+            @if($oldPrice && $oldPrice > $displayPrice)
+                <span class="text-sm md:text-base text-red-400 line-through decoration-red-300 font-light italic">
+                    {{ number_format($oldPrice, 0) }}
+                </span>
+            @endif
+
+
+{{-- السعر الحالي --}}
+            <span class="text-xl md:text-3xl font-black text-neutral leading-none">
+                {{ number_format($displayPrice, 0) }}
+                <span class="text-xs font-medium opacity-70">ل.س</span>
+            </span>
+
+
+
+
+
                 </div>
 
                 {{-- زر عرض التفاصيل --}}

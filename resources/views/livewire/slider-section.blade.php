@@ -45,7 +45,7 @@ data-aos-easing="ease-out-back">
             <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end justify-start p-8 md:p-20 text-right">
                 <div class="text-neutral-light">
                     @if($slide->title)
-                        <h2 class="text-3xl md:text-5xl font-black mb-4">{{ $slide->title }}</h2>
+                        <h2 class="text-3xl md:text-5xl font-black mb-4 text-white drop-shadow-lg">{{ $slide->title }}</h2>
                     @endif
                     @if($slide->link)
                         <a href="{{ $slide->link }}" class="inline-block bg-primary text-white px-8 py-3 rounded-full font-bold hover:bg-white hover:text-primary transition-colors">

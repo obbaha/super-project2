@@ -61,6 +61,10 @@ public static function getPluralModelLabel(): string
                     ->required()
                     ->numeric()
                     ->prefix('SYP'),
+                Forms\Components\TextInput::make('old_price')
+                    ->label(__('Old Price'))
+                    ->numeric()
+                    ->prefix('SYP'),
                 Forms\Components\Toggle::make('is_available')
                     ->label(__('Is Available'))
                     ->required(),
@@ -83,6 +87,11 @@ public static function getPluralModelLabel(): string
                     ->searchable(),
                 Tables\Columns\TextColumn::make('price')
                     ->label(__('Price'))
+                    ->sortable(),
+                Tables\Columns\TextColumn::make('old_price')
+                    ->label(__('Old Price'))
+                    ->money('SYP')
+                    ->color('danger') // لون أحمر للتنبيه
                     ->sortable(),
                 Tables\Columns\IconColumn::make('is_available')
                     ->label(__('Is_Available'))
