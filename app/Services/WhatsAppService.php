@@ -10,7 +10,7 @@ class WhatsAppService
 
     public function __construct()
     {
-        $rawNumber = config('services.whatsapp.phone_number', '963930761582');
+        $rawNumber = config('services.whatsapp.phone_number', '963983743275');
         $this->phoneNumber = preg_replace('/[^0-9]/', '', $rawNumber);
     }
 

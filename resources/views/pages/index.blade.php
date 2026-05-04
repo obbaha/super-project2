@@ -183,7 +183,7 @@ $resetFilters = function() {
                 {{-- محتوى الفوتر كما هو مع تعديل اللمسات الزجاجية في أيقونة الإنستقرام --}}
                 <div class="flex flex-col items-center">
                     <div class="mb-12 flex justify-center group" data-aos="zoom-in">
-                        <a href="https://www.instagram.com/syria_shop0/?hl=ar" target="_blank" class="relative">
+                        <a href="https://www.instagram.com/shaghaf_gifts2?igsh=MTQzMzMxamk3ZmwyMA==" target="_blank" class="relative">
                             <div class="w-24 h-24 rounded-full bg-white/10 backdrop-blur-2xl border border-primary/20 flex items-center justify-center transition-all duration-700 group-hover:border-primary/50 group-hover:scale-110">
                                 <i class="fab fa-instagram text-5xl transition-transform group-hover:rotate-12" style="background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;"></i>
                             </div>
