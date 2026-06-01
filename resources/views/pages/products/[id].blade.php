@@ -130,7 +130,7 @@ shareProduct() {
         if (navigator.share) {
             navigator.share({
                 title: '{{ $this->product->name }}',
-                text: 'اكتشفي هذه القطعة الفريدة من سوريا شوب',
+                text: 'اكتشفي هذه القطعة الفريدة من متجر هدايا شغف',
                 url: window.location.href
             }).catch(() => {}); {{-- لتجنب أخطاء الإلغاء --}}
         } else {
