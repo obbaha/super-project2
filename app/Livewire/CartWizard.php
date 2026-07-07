@@ -422,7 +422,7 @@ public function shareCart()
         return;
     }
 
-    $message = "وقعت عيناي على هذه القطع في *SYRIA SHOP0* ✨\n\n";
+    $message = "وقعت عيناي على هذه القطع في *Shaghaf Gifts2* ✨\n\n";
 
     foreach ($items as $item) {
         // تأكد أن الراوت يستقبل الـ variation_id فعلاً
