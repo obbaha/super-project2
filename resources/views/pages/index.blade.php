@@ -19,6 +19,8 @@ state([
 $products = computed(function() {
     return Product::query()
         ->with(['variations.featuredImage'])
+        ->orderBy('is_available', 'desc')
+        ->orderBy('updated_at', 'desc')
         ->when($this->selectedCategoryId, fn($q) => $q->where('category_id', $this->selectedCategoryId))
         ->when($this->search, function($query) {                     // ← added search logic
             $query->where(function($q) {
