@@ -112,6 +112,12 @@ public static function getPluralModelLabel(): string
                 //
             ])
             ->actions([
+                Tables\Actions\Action::make('bumpToTop')
+                    ->label(__('Bump to Top'))
+                    ->icon('heroicon-o-arrow-up-circle')
+                    ->color('warning')
+                    ->action(fn (Product $record) => $record->touch())
+                    ->requiresConfirmation(),
                 Tables\Actions\EditAction::make(),
             ])
             ->bulkActions([
