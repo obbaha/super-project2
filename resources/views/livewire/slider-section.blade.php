@@ -42,7 +42,7 @@ data-aos-easing="ease-out-back">
             <img src="{{ Storage::url($slide->image->path) }}" class="object-cover w-full h-full">
 
             {{-- الطبقة المظلمة والمحتوى --}}
-            <div class="absolute inset-0 flex items-end justify-start p-8 md:p-20 text-right">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent flex items-end justify-start p-8 md:p-20 text-right">
                 <div class="text-neutral-light">
                     @if($slide->title)
                         <h2 class="text-3xl md:text-5xl font-black mb-4 text-white drop-shadow-lg">{{ $slide->title }}</h2>
